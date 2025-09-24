@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContadorManual.GUI.MainPage"
+             Title="Contador God"
+             BackgroundColor="LightGrey">
+             
+
+    <VerticalStackLayout
+        Margin="24">
+        <Label
+            Text="Conteo:"
+            FontSize="Medium"/>
+        <Border
+            Stroke="Grey"
+            Margin="0,24,0,36">
+            
+            <Label
+               HorizontalOptions="Center"
+               Text="0"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Margin="0,24"
+                TextColor="Black"
+                x:Name="ConteoLabel"/>
+                
+        </Border>
+        
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="32">
+            <Button
+               Text="Contar"
+               FontSize="Medium"
+                WidthRequest="130"
+                Clicked="Button_Clicked"/>
+            <Button
+               Text="Reniciar"
+                FontSize="Medium"
+                WidthRequest="130"
+                Clicked="Button_Clicked_1"/>
+                
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>
