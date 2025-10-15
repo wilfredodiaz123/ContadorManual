@@ -41,12 +41,12 @@
                Text="Contar"
                FontSize="Medium"
                 WidthRequest="130"
-                Clicked="Button_Clicked"/>
+                Clicked="OnContarButtonClicked"/>
             <Button
                Text="Reniciar"
                 FontSize="Medium"
                 WidthRequest="130"
-                Clicked="Button_Clicked_1"/>
+                Clicked="OnReiniciarButtonClicked"/>
 
         </HorizontalStackLayout>
     </Grid>

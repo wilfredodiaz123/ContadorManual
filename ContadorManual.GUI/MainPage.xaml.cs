@@ -1,27 +1,27 @@
-﻿namespace ContadorManual.GUI
+﻿using ContadorManual.GUI.Models;
+namespace ContadorManual.GUI
 {
     public partial class MainPage : ContentPage
     {
-        private int _conteo;
+        private Contador contador;
 
         public MainPage()
         {
             InitializeComponent();
-            _conteo = 0;
-            ConteoLabel.Text = _conteo.ToString();
-
+            contador = new Contador();
+            ConteoLabel.Text = contador.Conteo.ToString();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void OnContarButtonClicked(object sender, EventArgs e)
         {
-            _conteo++;
-            ConteoLabel.Text = _conteo.ToString();
+            contador.Contar();
+            ConteoLabel.Text = contador.Conteo.ToString();
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        private void OnReiniciarButtonClicked(object sender, EventArgs e)
         {
-            _conteo=0;
-            ConteoLabel.Text = _conteo.ToString();
+            contador.Reiniciar();
+            ConteoLabel.Text = contador.Conteo.ToString();
         }
     }
 }
